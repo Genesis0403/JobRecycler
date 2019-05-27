@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+>
+
+    <ImageView
+            android:id="@+id/jobLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginStart="@dimen/marginStart"
+            android:layout_marginEnd="@dimen/marginEnd"
+            android:layout_marginBottom="@dimen/marginBottom"
+            tools:src="@tools:sample/avatars"
+    />
+
+    <LinearLayout
+            android:id="@+id/infoContainer"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop"
+    >
+
+        <TextView
+                android:id="@+id/jobName"
+                tools:text="Lead Java Developer"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="24sp"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+        />
+
+        <TextView
+                android:id="@+id/companyName"
+                tools:text="EPAM"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+        />
+
+        <TextView
+                android:id="@+id/location"
+                tools:text="London"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="16sp"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+
+
+</LinearLayout>
