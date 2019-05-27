@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JobRecycler</string>
+    <string name="retrying_download">Retrying to download jobs...</string>
+    <string name="faild_to_download">Failed downloading jobs...</string>
 </resources>
