@@ -10,12 +10,13 @@
 
     <ImageView
             android:id="@+id/jobLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginTop="@dimen/marginTop"
             android:layout_marginStart="@dimen/marginStart"
-            android:layout_marginEnd="@dimen/marginEnd"
+            android:layout_marginEnd="@dimen/logoMarginEnd"
             android:layout_marginBottom="@dimen/marginBottom"
+            android:layout_gravity="center_vertical"
             tools:src="@tools:sample/avatars"
     />
 
@@ -25,6 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/marginTop"
+            android:layout_marginBottom="@dimen/marginBottom"
+            android:layout_marginEnd="@dimen/marginEnd"
     >
 
         <TextView

@@ -1,8 +1,10 @@
 package com.epam.jobrecycler.model
 
+import com.google.gson.annotations.SerializedName
+
 data class Job(
-    val companyName: String,
-    val companyLogo: String?,
-    val job: String,
-    val location: String
+    @SerializedName("company") val companyName: String,
+    @SerializedName("company_logo") val companyLogo: String?,
+    @SerializedName("title") val job: String,
+    @SerializedName("location") val location: String
 )

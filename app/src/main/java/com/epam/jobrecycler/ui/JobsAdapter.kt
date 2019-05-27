@@ -1,6 +1,5 @@
 package com.epam.jobrecycler.ui
 
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +26,7 @@ class JobsAdapter(private val jobs: List<Job>) : RecyclerView.Adapter<RecyclerVi
         val jobItem = holder as JobViewHolder
         val job = jobs[position]
         job.apply {
-            loadCompanyLogo(Uri.parse(job.companyLogo) ?: Uri.EMPTY, jobItem.companyLogo)
+            loadCompanyLogo(job.companyLogo, jobItem.companyLogo)
             jobItem.companyName.text = job.companyName
             jobItem.location.text = job.location
             jobItem.job.text = job.job
@@ -42,10 +41,13 @@ class JobsAdapter(private val jobs: List<Job>) : RecyclerView.Adapter<RecyclerVi
         val job: TextView = view.findViewById(R.id.jobName)
     }
 
-    private fun loadCompanyLogo(uri: Uri, imageView: ImageView) {
+    private fun loadCompanyLogo(uri: String?, imageView: ImageView) {
         Glide.with(imageView)
             .load(uri)
-            .apply(RequestOptions.centerCropTransform().fitCenter())
+            .apply(
+                RequestOptions.centerCropTransform()
+                    .fitCenter()
+            )
             .error(R.drawable.photo_error_24dp)
             .into(imageView)
     }
